@@ -50,7 +50,8 @@ body {
 .card-details__cvc{
     border-radius: 8px;
     width: 80%;
-    height: 180px;
+    min-height: 180px;
+    max-width: 360px;
     margin-left: auto;
     background-image: url("/images/bg-card-back.png");
     background-position: center;
@@ -63,12 +64,13 @@ body {
 }
 
 .card-details__cvc p{
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 .card-details__front{
     width: 80%;
-    height: 180px;
+    min-height: 180px;
+    max-width: 28rem;
     padding: 1rem;
     border-radius: 8px;
     display: flex;
@@ -78,7 +80,7 @@ body {
     background-position: center;
     background-size: cover;
     position: absolute;
-    bottom: -1.7rem;
+    bottom: -2rem;
     box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -104,6 +106,8 @@ body {
 
 .card-input-form{
     padding: 1.5rem;
+    max-width: 375px;
+    margin: 0 auto;
     
 }
 
@@ -186,5 +190,65 @@ body {
     color: var(--errors);
     font-size: .9rem;
 
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        flex-direction: row;
+        
+        
+    }
+    .card-details{
+        background-image: url("/images/bg-main-desktop.png");
+        width: 40vw;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+
+    .card-input-form{
+        align-self: center;
+    }
+
+    .card-details__front{
+        all: unset;
+        width: 340px;
+        min-height: 180px;
+        max-width: 360px;
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: url("/images/bg-card-front.png");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 25%;
+        right: -7rem;
+        box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.4);
+    
+        
+    }
+
+    .card-details__cvc{
+        all: unset;
+        width: 340px;
+        border-radius: 8px;
+        width: 80%;
+        min-height: 180px;
+        max-width: 360px;
+        margin-left: auto;
+        background-image: url("/images/bg-card-back.png");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        right: -12rem;
+        margin-top: 8rem;
+    }
 }
 
